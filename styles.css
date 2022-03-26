@@ -1,0 +1,70 @@
+main
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 75vh;
+    min-height: 25rem;
+    width: 100%;
+    overflow: hidden;
+}
+video
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-30%) translateY(-25%);  
+}
+.overlay
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 1;
+}
+.mainDivSearch
+{
+    position: relative;
+    z-index: 2;
+}
+.mainDivDivText
+{
+    color: white;
+    display: grid;
+    grid-template-columns: 100%;
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+}
+.mainDivDivInput
+{
+    display: grid;
+    grid-template-columns: 15% 15%;
+    column-gap: 1%;
+    justify-content: center;
+}
+.mainDivDivInput > input
+{
+    border: none;
+    border-radius: 5px;
+}
+.mainDivDivInput > button
+{
+    border: none;
+    border-radius: 5px;
+}
