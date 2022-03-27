@@ -1,10 +1,10 @@
-let mainSection1 = document.getElementById("mainSection1");
-let mainSection2 = document.getElementById("mainSection2");
+let header = document.getElementById("header");
 let mainDivResults = document.getElementById("mainDivResults");
+let footer = document.getElementById("footer");
+let auxiliarArray = [];
 
 function searchAsteroids() 
 {
-    mainSection1.innerHTML = ``;
     let dateInput = document.getElementById("dateInput").value
     dateInput = dateInput.replace("/", "-");
     let config = {
@@ -14,10 +14,22 @@ function searchAsteroids()
   }
     axios(config).then(response => 
         {
-            let objects = response.data.near_earth_objects[dateInput]
-            console.log(objects)
-        }).catch(error)
-        {
-            console.log(error);
-        }
+            let asteroids = response.data.near_earth_objects[dateInput];
+            for(let i = 0; i < asteroids.length; i++)
+            {
+                auxiliarArray.push(asteroids[i]);
+            }
+            showAsteroids(auxiliarArray);
+        })
+}
+
+function showAsteroids(array)
+{
+    header.setAttribute("position", "fixed")
+    console.log(array);
+    for(let i = 0; i < array.length; i++)
+    {
+        let card = `${array[i].name}`;
+        console.log(card);
+    }
 }
