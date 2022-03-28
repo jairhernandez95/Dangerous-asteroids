@@ -1,4 +1,6 @@
 let header = document.getElementById("header");
+let main = document.getElementById("main");
+let mainDivSearch = document.getElementById("mainDivSearch");
 let mainDivResults = document.getElementById("mainDivResults");
 let footer = document.getElementById("footer");
 let auxiliarArray = [];
