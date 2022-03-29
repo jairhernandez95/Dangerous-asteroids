@@ -3,6 +3,15 @@
     margin: 0;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
 }
+header > div
+{
+    background: rgba(0, 0, 0, 0.5);
+}
+video
+{
+    z-index: -1;
+    position: fixed;
+}
 body
 {
     display: grid;
@@ -10,13 +19,6 @@ body
     grid-template-rows: 33% 34% 33%;
     height: 100vh;
     justify-content: center;
-}
-video
-{
-    z-index: -1;
-    position: fixed;
-    opacity: 1.1;
-    background-color: black;
 }
 main
 {
