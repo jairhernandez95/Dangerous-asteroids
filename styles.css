@@ -1,16 +1,13 @@
 *
 {
     margin: 0;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
 }
-header > div
-{
-    background: rgba(0, 0, 0, 0.5);
-}
+
 video
 {
     z-index: -1;
     position: fixed;
+    filter:blur(5px);
 }
 body
 {
@@ -20,7 +17,7 @@ body
     height: 100vh;
     justify-content: center;
 }
-main
+.mainDivSearch
 {
     color: white;
 }
@@ -50,4 +47,15 @@ main
 {
     border: none;
     border-radius: 5px;
+}
+.mainDivResults
+{
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20%;
+    row-gap: 2%;
+}
+.card
+{
+    cursor: pointer;
+    max-height:max-content;
 }
