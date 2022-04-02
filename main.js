@@ -28,17 +28,21 @@ function searchAsteroids()
 
 function showAsteroids(array)
 {
-    header.style.height = "min-content"
+    header.style.display = "none";
     console.log(array);
-    mainDivSearch.setAttribute("class", "fixed-top");
     mainDivSearch.style.color = "black";
     mainDivSearch.style.backgroundColor= "white";
     console.log(array);
     let card = ``;
     for(let i = 0; i < array.length; i++)
     {
+
         let name = array[i].name;
         let closeApproachDate = array[i].close_approach_data[0].close_approach_date_full;
+        closeApproachDate = closeApproachDate.slice(0,11);
+        let closeApproachHour = array[i].close_approach_data[0].close_approach_date_full;
+        closeApproachHour = closeApproachHour.slice(12,17);
+        console.log(closeApproachHour);
         let relativeVelocity = parseFloat(array[i].close_approach_data[0].relative_velocity.kilometers_per_second).toFixed(2);
         let estimatedDiameterMetersMax =  array[i].estimated_diameter.meters.estimated_diameter_max.toFixed(2);
         let estimatedDiameterMetersMin =  array[i].estimated_diameter.meters.estimated_diameter_min.toFixed(2);
@@ -52,7 +56,8 @@ function showAsteroids(array)
                 <div class="card-body">
                     <div class="titlesOfCard">
                         <h2 class="card-title">Name: ${name}</h2>
-                        <h4 class="card-subtitle mb-2 text-muted">Close approach date: ${closeApproachDate}</h4>
+                        <!-- <h4 class="card-subtitle mb-2 text-muted">Close approach date: ${closeApproachDate}</h4> -->
+                        <h4 class="card-subtitle mb-2 text-muted">Close approach hour: ${closeApproachHour}</h4>
                         <h4>Relative velocity: ${relativeVelocity} km/s</h4>
                         <h4>Estimated diameter: from ${estimatedDiameterMetersMin} meters to ${estimatedDiameterMetersMax} meters</h4>
                     </div>
