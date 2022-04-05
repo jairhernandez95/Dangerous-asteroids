@@ -3,26 +3,11 @@
     margin: 0;
 }
 
-video
+.headerDivSearch
 {
-    z-index: -1;
-    position: fixed;
-    filter:blur(5px);
-}
-body
-{
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 33% 34% 33%;
-    height: 100vh;
-    justify-content: center;
-}
-.mainDivSearch
-{
-    color: white;
     padding-top: 2%;
 }
-.mainDivDivText
+.headerDivDivText
 {
     display: grid;
     grid-template-columns: 100%;
@@ -32,22 +17,25 @@ body
     align-items: center;
     align-content: center;
 }
-.mainDivDivInput
+.headerDivDivInput
 {
     display: grid;
     grid-template-columns: 15% 15%;
     column-gap: 1%;
     justify-content: center;
 }
-.mainDivDivInput > input
+.headerDivDivInput > input
+{
+    border-radius: 5px;
+}
+.headerDivDivInput > button
 {
     border: none;
     border-radius: 5px;
 }
-.mainDivDivInput > button
+main
 {
-    border: none;
-    border-radius: 5px;
+    margin-top: 150px;
 }
 .mainDivResults
 {

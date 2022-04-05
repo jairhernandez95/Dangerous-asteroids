@@ -16,22 +16,20 @@
 </head>
 <body>
     <header id="header">
-        <div>
-            <video autplay src="./assets/space-world.mp4"></video>
-        </div>
-    </header>
-    <main id="main">
-        <div class="mainDivSearch" id="mainDivSearch">
-            <div class="mainDivDivText">
+        <div class="headerDivSearch" id="headerDivSearch">
+            <div class="headerDivDivText">
                 <h1>Dangerous Asteroids</h1>
                 <h2>Pick a date from the calendar below and know the most dangerous asteroids for our world</h2>
             </div>
-            <div class="mainDivDivInput">
+            <div class="headerDivDivInput">
                 <input type="date" class="dateInput" id="dateInput">
                 <button onclick="searchAsteroids()">Search</button>
             </div>
         </div>
-        <div class="mainDivResults justify-content-center" id="mainDivResults"></div>
+    </header>
+    <main id="main">
+        <div class="mainDivResults justify-content-center" id="mainDivResults">
+        </div>
     </main>
 </body>
 </html>
